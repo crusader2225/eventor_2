@@ -6,8 +6,7 @@
   <%= csp_meta_tag %>
   <link href="https://fonts.googleapis.com/css?family=Caveat:400,700|Kaushan+Script|Marcellus|Rock+Salt&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,18 +19,13 @@
     </div>
     <ul class="nav navbar-nav first_nav">
       <li class="active"><%= link_to 'EVENTS', events_path %></li>
-
+      <li><%= link_to 'Contact Us', pages_contact_path%></li>
+      <li><%= link_to 'About Us', pages_about_path%></li>
     </ul>
     <ul class= "nav navbar-nav navbar-right second_nav">
 
 
-      <% if current_user %>
-      <li><%= link_to 'Log Out', logout_path %></li>
-      <li><%= link_to 'MY PROFILE', users_path %></li>
-      <% else %>
-      <li><%= link_to 'Sign Up', new_user_path %></li>
-      <li><%= link_to 'Log In', login_path %></li>
-      <% end %>
+
     </ul>
 
 
@@ -42,5 +36,7 @@
 <body>
 
   <%= yield %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>
