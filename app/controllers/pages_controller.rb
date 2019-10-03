@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  
+
 
   def about
   end
@@ -10,7 +10,8 @@ class PagesController < ApplicationController
   def index
   end
 
-
+  def show
+  end
 
 
 end
